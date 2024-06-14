@@ -1,5 +1,10 @@
 # android-retrofit-tutorial
 
+## How to run the project
+1. Modify the API_KEY in the MainActivity
+2. Run the app by clicking the "run" button
+
+
 This tutorial/lab aims to provide hands-on experience of building an Android app that retrieves and displays data with REST API. We will first introduce how to:
 
 1. Use [Retrofit](https://square.github.io/retrofit/) to retrieve data of single movie from [The Movie DB](https://www.themoviedb.org/) and display the data in an Activity.

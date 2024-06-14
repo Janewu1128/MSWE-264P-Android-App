@@ -15,12 +15,15 @@ import java.util.Locale;
 
 public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.ViewHolder> {
 
+    //list to hold Movie objects
     private List<Movie> topRatedResponse;
 
+    //initializes the adapter with a list of Movie objects
     MovieListAdapter(List<Movie> list) {
         this.topRatedResponse = list;
     }
 
+    //holds the view for each item in the RecyclerView
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivMovie;
         TextView tvTitle;
@@ -38,6 +41,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
         }
     }
 
+    //creates a ViewHolder for each item
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -45,6 +49,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
         return new ViewHolder(view);
     }
 
+    //binds the data from topRatedResponse list to the views in each ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Movie movie = topRatedResponse.get(position);
@@ -55,6 +60,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.View
         holder.tvOverview.setText(movie.getOverview());
     }
 
+    //returns the total number of items in the data list
     @Override
     public int getItemCount() {
         return topRatedResponse.size();
